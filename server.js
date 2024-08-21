@@ -10,7 +10,14 @@ const PORT = process.env.PORT || 5000;
 
 const uri = `mongodb+srv://soumojit:root@anime.l2aiz.mongodb.net/`;
 // Middleware
-app.use(cors());
+// Configure CORS to allow requests from your GitHub Pages frontend
+const corsOptions = {
+  origin: "https://your-github-pages-url", // Replace with your frontend URL
+  allowedHeaders: ["Content-Type", "Authorization"],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+};
+app.use(cors(corsOptions));
+
 app.use(bodyParser.json());
 
 // Connect to MongoDB Atlas
@@ -18,7 +25,6 @@ mongoose
   .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB Atlas connected"))
   .catch((err) => console.error("MongoDB Atlas connection error:", err));
-
 
 // Test Route
 app.get("/", (req, res) => {

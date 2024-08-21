@@ -11,10 +11,11 @@ const PORT = process.env.PORT || 5000;
 const uri = `mongodb+srv://soumojit:root@anime.l2aiz.mongodb.net/`;
 
 const corsOptions = {
-  origin: "https://soumojit08.github.io/Anime-List/",  // Replace if your frontend URL is different
+  origin: "https://soumojit08.github.io/Anime-List/", // Make sure to include the trailing slash
   allowedHeaders: ["Content-Type", "Authorization"],
   methods: ["GET", "POST", "PUT", "DELETE"],
 };
+
 app.use(cors(corsOptions));
 
 app.use(bodyParser.json());

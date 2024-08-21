@@ -12,7 +12,7 @@ const uri = `mongodb+srv://soumojit:root@anime.l2aiz.mongodb.net/`;
 // Middleware
 // Configure CORS to allow requests from your GitHub Pages frontend
 const corsOptions = {
-  origin: "https://your-github-pages-url", // Replace with your frontend URL
+  origin: "https://soumojit08.github.io/Anime-List/", // Replace with your frontend URL
   allowedHeaders: ["Content-Type", "Authorization"],
   methods: ["GET", "POST", "PUT", "DELETE"],
 };

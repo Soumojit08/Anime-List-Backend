@@ -11,11 +11,10 @@ const PORT = process.env.PORT || 5000;
 const uri = `mongodb+srv://soumojit:root@anime.l2aiz.mongodb.net/`;
 
 const corsOptions = {
-  origin: "https://anime-list-wheat.vercel.app", // Make sure to include the trailing slash
+  origin: "https://anime-list-wheat.vercel.app/", // Make sure to include the trailing slash
   allowedHeaders: ["Content-Type", "Authorization"],
   methods: ["GET", "POST", "PUT", "DELETE"],
 };
-
 app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
